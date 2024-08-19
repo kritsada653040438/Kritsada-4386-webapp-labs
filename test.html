@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressed Effect</title>
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green background */
+            border: none;
+            color: white; /* White text */
+            padding: 15px 32px; /* Some padding */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px; /* Rounded corners */
+            transition: all 0.1s ease; /* Smooth transition */
+        }
+
+        .button:active {
+            background-color: #45a049; /* Darker green when pressed */
+            transform: scale(0.5); /* Slightly shrink the button */
+            box-shadow: inset 0 4px 6px rgba(255, 0, 0, 0.399); /* Inner shadow */
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Press Me</button>
+</body>
+</html>
