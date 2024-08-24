@@ -17,7 +17,7 @@
             while (true) {
                 let input = prompt("Please enter a positive integer:");
                 number = parseFloat(input);
-                if (!isNaN(number) && number > 0 && Number.isInteger(number)) break;
+                if (!isNaN(number) && number > 0 && Number.isInteger(number) && number === '') break;
                 continue;
             }
 

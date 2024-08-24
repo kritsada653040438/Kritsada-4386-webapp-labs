@@ -16,7 +16,7 @@
     }
 
     function displayStats(list) {
-        let average = list.length ? (list.reduce((a, b) => a + b, 0) / list.length).toFixed(2) : 0;
+        let average = list.length ? (list.reduce((a, b) => a + b, 0) / list.length).toFixed(4) : 0;
         let min = list.length ? Math.min(...list) : 0;
         let max = list.length ? Math.max(...list) : 0;
         alert(`For the list : ${list}\n The Average is : ${average}\n The Minimum is : ${min}\n The Maximum is : ${max}`);
