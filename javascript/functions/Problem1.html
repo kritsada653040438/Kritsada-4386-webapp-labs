@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Larger Number</title>
+    <style> 
+        body {
+            font-size: 20px; 
+            line-height: 1.6; 
+        }
+        h1 {
+            font-size: 36px; 
+        }
+        p {
+            font-size: 24px; 
+        }
+        ul, ol {
+            font-size: 22px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Find the Larger Number</h1>
+    <script>
+        const findLarger = function(num1, num2) {
+            return num1 > num2 ? num1 : num2;
+        }
+
+        function checkAndDisplayLarger() {
+            const number1 = parseFloat(prompt("Enter the first number:"));
+            if (number1 === '') {
+                return checkAndDisplayLarger();
+            }
+            const number2 = parseFloat(prompt("Enter the second number:"));
+
+            if (isNaN(number1) || isNaN(number2)) {
+                alert("Please enter valid numbers.");
+                return checkAndDisplayLarger();
+            } else {
+                const largerNumber = findLarger(number1, number2);
+                document.write(`Entered two numbers to see wich is larger<br>`);
+                document.write(`The larger number between ${number1} and ${number2} is : ${largerNumber}`);
+            }
+        }
+        checkAndDisplayLarger();
+    </script>
+    
+    
+    
+</body>
+</html>
