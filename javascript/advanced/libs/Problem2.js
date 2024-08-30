@@ -13,23 +13,20 @@ let Library = {
         newBook.title = title;
         newBook.author = author;
         this.books.push(newBook);
-        this.updateOutput("Added: " + newBook.bio());
+        document.write("Added: " + newBook.bio()+ "<br/>");
     },
     searchBooks: function(query) {
         let found = false;
         for (let i = 0; i < this.books.length; i++) {
             if (this.books[i].title === query || this.books[i].author === query) {
-                this.updateOutput("Found: " + this.books[i].bio());
+                document.write("Found: " + this.books[i].bio()+ "<br/>");
                 found = true;
             }
         }
         if (!found) {
-            this.updateOutput("Book with query " + query + " is not found");
+            document.write("Book with query " + query + " is not found"+ "<br/>");
         }
     },
-    updateOutput: function(text) {
-        document.write(text + "<br/>");
-    }
 };
 
 function displayBooks() {
@@ -41,19 +38,19 @@ function displayBooks() {
     Library.addBook("The Catcher in the Rye", "J.D. Salinger");
 
     // Demonstrating functionality
-    Library.updateOutput("<br/>Searching for the book with author 'Harper Lee':");
+    document.write("<br/>Searching for the book with author 'Harper Lee':</br>");
     Library.searchBooks("Harper Lee");
 
-    Library.updateOutput("<br/>Searching for the book with title 'The Great Gatsby':");
+    document.write("<br/>Searching for the book with title 'The Great Gatsby':</br>");
     Library.searchBooks("The Great Gatsby");
 
-    Library.updateOutput("<br/>Searching for the book with title 'Design Thinking':");
+    document.write("<br/>Searching for the book with title 'Design Thinking':</br>");
     Library.searchBooks("Design Thinking");
 
     // Displaying all books in the library
-    Library.updateOutput("<br/>These are the books in the library:");
+    document.write("<br/>These are the books in the library:</br>");
     for (let i = 0; i < Library.books.length; i++) {
-        Library.updateOutput((i + 1) + ". " + Library.books[i].bio());
+        document.write((i + 1) + ". " + Library.books[i].bio()+ "<br/>");
     }
 }
 
