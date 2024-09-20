@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parse student file</title>
+    <script>
+      fetch("/JSON/students.json")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          let informations = data.wclass;
+          let studentList = "";
+          for (let info of informations) {
+            let student = info.student;
+            studentList +=
+              "<li>" +
+              student["@attributes"].id +
+              " " + 
+              "<b>"+ student.name + "</b>" +
+              " " +"has skill "+ "<i>" +
+                student.skill + "</i>" +
+              "</li>";
+          }
+          document.getElementById("demo").innerHTML = studentList;
+        });
+    </script>
+  </head>
+  <body>
+    <h2>Reading student information</h2>
+    <ol id="demo"></ol>
+  </body>
+</html>
