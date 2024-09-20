@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>province-of-Thailand</title>
+  </head>
+  <body>
+    <h1>List of Thailand Provinces</h1>
+    <div id="list_Province"></div>
+    <script>
+            const options = {
+              method: "GET",
+
+              headers: {
+                "x-rapidapi-host": "provinces-of-thailand.p.rapidapi.com",
+                "x-rapidapi-key":
+                  "974a18af2amsha1d3ecc5d47ce5fp155aa3jsncc88ce31d4ff",
+              },
+            };
+
+            fetch("https://provinces-of-thailand.p.rapidapi.com/province/", options)
+              .then((response) => {
+                return response.json();
+              })
+              .then((data) => {
+                const list_Province_Element = document.getElementById("list_Province");
+                const ol = document.createElement("ol");
+                data.forEach((item) => {
+                  const li = document.createElement("li");
+                  li.textContent = JSON.stringify(item.province_name).replace(/"/g, "");
+                  ol.appendChild(li);
+                });
+                list_Province_Element.appendChild(ol);
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+              });
+    </script>
+  </body>
+</html>
