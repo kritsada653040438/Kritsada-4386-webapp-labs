@@ -1,0 +1,11 @@
+{
+    "name": "Kritsada-4386-exercise",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+    "calculator": "node calculator.mjs"
+    },
+    "type": "module"
+  }
+  

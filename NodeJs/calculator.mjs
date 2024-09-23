@@ -20,7 +20,7 @@ if (args.length === 2) {
         {
             type: 'input',
             name: 'operation',
-            message: 'add | Subtract : ',
+            message: 'add | subtract : ',
         }
     ]).then(answers => {
         if (answers.operation === 'add') {
