@@ -4,7 +4,7 @@ function GithunInfo() {
   const userInfo = {
     url: "https://github.com/kritsada653040438",
     imgURL: "https://avatars.githubusercontent.com/kritsada653040438",
-    alt: "Kritsada   mahanam",
+    alt: "Kritsada   Mahanam",
   };
   return (
     <div class="app">
