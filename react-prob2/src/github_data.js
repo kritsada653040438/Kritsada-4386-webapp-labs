@@ -12,7 +12,7 @@ export function GitHubRepoURL({ url }) {
   return (
     <h3>
     <a href={url} target="_blank" rel="noopener noreferrer">
-      Visit my GitHub repository
+      GitHub repository
     </a>
     </h3>
   );
