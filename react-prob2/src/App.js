@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import "./App.css";
+import { GitHubAvatar, GitHubRepoURL } from "./github_data.js";
+function GithunInfo() {
+  const userInfo = {
+    url: "https://github.com/kritsada653040438",
+    imgURL: "https://avatars.githubusercontent.com/kritsada653040438",
+    alt: "Kritsada   mahanam",
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="app">
+      <h1>{userInfo.alt}</h1>
+      <GitHubAvatar avatarUrl={userInfo.imgURL} />
+      <GitHubRepoURL url={userInfo.url} />
     </div>
   );
 }
 
-export default App;
+export default GithunInfo;
