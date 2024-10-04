@@ -2,6 +2,7 @@ import React from "react";
 export function GitHubInfo({users} , size = 50) {
   return (
     <div>
+      <h2>{users.alt}</h2>
       <img
         src={users.imgURL}
         alt="GitHub Avatar"
