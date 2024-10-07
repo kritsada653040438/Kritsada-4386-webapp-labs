@@ -3,14 +3,12 @@ import './App.css';
 import {users} from './user.js';
 
 function App() {
-
+  const Popular_user = users.filter((user) => user.followers > 10000).map((user) => <GitHubInfo users={user}/>);
   return (
     <div className="App">
       <h1>Sample GitHub Repositories</h1>
       <ol>
-      <GitHubInfo users={users[0]}/>
-      <GitHubInfo users={users[1]}/>
-      <GitHubInfo users={users[2]}/>
+      {Popular_user}
       </ol>
     </div>
   );

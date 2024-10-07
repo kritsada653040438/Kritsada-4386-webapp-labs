@@ -8,9 +8,9 @@ export function GitHubInfo({users}) {
           alt={users.alt}
         />
           <a href={users.url} target="_blank" rel="noopener noreferrer">
-          {users.alt} ({users.followers} followers)
+          {users.alt}
           </a>
-        
+          ({users.followers} followers)
       </li>
     );
   }else{
