@@ -2,7 +2,8 @@
 export const users = [
         {url: "https://github.com/kritsada653040438",
           imgURL: "https://avatars.githubusercontent.com/kritsada653040438",
-          alt: "Kritsada   Mahanam"},
+          alt: "Kritsada   Mahanam",
+          followers: 25},
           {
             url: "https://github.com/facebook",
             imgURL: "https://avatars.githubusercontent.com/u/69631?v=4",
