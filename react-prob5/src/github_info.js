@@ -6,7 +6,6 @@ export function GitHubInfo({users}) {
         <img
           src={users.imgURL}
           alt={users.alt}
-          
         />
           <a href={users.url} target="_blank" rel="noopener noreferrer">
           {users.alt} ({users.followers} followers)
